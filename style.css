@@ -1,0 +1,15 @@
+.banner {
+    background-color: #e17324; /* Blue background color */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Add a border */
+    color: white; /* White text color */
+    width: 100%; /* Make the banner cover the whole width of the page */
+    height: 17vh;
+    font-size: 50px;
+    display: flex; /* Use flexbox layout */
+   align-items: flex-end; /* Align the items at the bottom of the banner */
+   justify-content: left; /* lefttt the items horizontally yay */
+  
+  }
+  
+
