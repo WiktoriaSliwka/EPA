@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 import os
-
+#css for banner
 css_file = os.path.abspath("style.css")
 
 def local_css():
@@ -11,10 +11,26 @@ def local_css():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 local_css()
 
-
+#landing page
 st.markdown('<div class="banner">BeepBoop</div>', unsafe_allow_html=True)
-st.header("Rep Schedule")
-st.write("This shows Bloomberg ticket volumes over time.")
+st.header("Ticket history")
+st.write("This shows the companies ticket volumes throughout 2023.")
+
+tab1, tab2, tab3 = st.tabs(["Month", "Week", "Day"])
+
+with tab1:
+   st.header("Monthly ticket distribution")
+   st.image("graphs/linegraph.png")
+
+with tab2:
+   st.header("Weekly ticket distribution")
+   st.image("graphs/weekly.png")
+
+with tab3:
+   st.header("Dailey ticket distribution")
+   st.image("graphs/dailey.png")
+
+
 
 
 
