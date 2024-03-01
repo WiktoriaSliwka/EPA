@@ -12,7 +12,7 @@ local_css()
 
 st.markdown('<div class="banner">BeepBoop</div>', unsafe_allow_html=True)
 
-tab1, tab2, tab3 = st.tabs(["A", "B", "C"])
+tab1, tab2, tab3 = st.tabs(["Regional", "Inquiries", "Reps"])
 
 with tab1:
    st.header("Regional inquires")
