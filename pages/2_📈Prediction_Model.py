@@ -5,6 +5,10 @@ import os
 import numpy as np
 css_file = os.path.abspath("style.css")
 
+st.set_page_config(page_title="Ticket Dahsboard",
+                   page_icon=":bar_chart:",
+                   layout="wide")
+
 def local_css():
     with open("style.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -20,9 +24,6 @@ daily_ticket_volume = df.resample('D').size()
 weekly_ticket_volume = daily_ticket_volume.resample('W').sum()
 reps_needed = weekly_ticket_volume / 5  
 reps_needed['Tickets Generated'] = weekly_ticket_volume
-
-
-
 
 
 tab1, tab2 = st.tabs ({"Graph", "Table"})

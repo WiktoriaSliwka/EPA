@@ -37,16 +37,16 @@ tab1, tab2, tab3, tab4 = st.tabs(["Month", "Week", "Day", "Tables"])
 with tab1:
    st.header("Monthly ticket distribution")
    st.image("graphs/linegraph.png")
-   #st.write(tickets_per_month)
+
 
 with tab2:
    st.header("Weekly ticket distribution")
    st.image("graphs/weekly.png")
-   #st.write(tickets_per_week)
+ 
 with tab3:
    st.header("Dailey ticket distribution")
    st.image("graphs/dailey.png")
-   #st.write(tickets_per_day_df)
+  
    
 with tab4:
     st.header("Ticket Distribution")
@@ -72,41 +72,6 @@ with tab4:
 
 
 # 📊💻📈🗄️🌍
-# DEFAULT_PAGE = "main.py"
-# with st.sidebar:
-#     selected = option_menu(
-#         menu_title= "Docs",
-#         options=["Home", "Prediction_Model","Mapping"],
-#         icons=["house", "chart","graph"]
-#     )
-
-# selected = option_menu(
-#         menu_title= "Docs",
-#         options=["Home", "Prediction Model","Mapping"],
-#         icons=["house", "chart","graph"],
-#         default_index=0,
-#         orientation="horizontal",
-#         styles={
-#         "container": {"padding": "0!important", "background-color": "defult"},
-#         "icon":{"color": "blue", "font-size": "25px"},
-#         "nav-link": {
-#             "font-size": "25px",
-#             "text-align": "left",
-#             "margin": "0px",
-#             "--hover-color": "#eee",
-#          },
-#         "nav-link-selected": {"background-color": "green"},
-#     }
-#     )
-
-# if selected == "Home":
-#     st.title(f"Next {selected}")
-# if selected == "Prediction Model":
-#     st.title(f"Next {selected}")
-# if selected == "Mapping":
-#     st.title(f"Next {selected}")
-# st.page_link("http://www.google.com", label="Google")
-
 
 # # Objective
 # st.header("Objective")
