@@ -28,7 +28,7 @@ df['Create Date'] = pd.to_datetime(df['Create Date'])
 # Replace "-" with NaN in 'Resolve Date' column
 df['Resolve Date'] = pd.to_datetime(df['Resolve Date'], errors='coerce')
 # Calculate resolution time for each ticket
-df['Resolution Time'] = (df['Resolve Date'] - df['Create Date']).dt.days
+df['Resolution Time'] = (df['Resolve Date'] - df['Create Date']).dt.days+ 1
 # Group by 'Product' column and calculate average resolution time for each product
 average_resolution_time = df.groupby('Product')['Resolution Time'].mean().reset_index()
 
@@ -54,13 +54,12 @@ with tab2:
     st.write("Average Resolution Time per Employee:")
     st.write(average_resolution_time_per_employee)
 with tab3:
-    st.header("Inquiries  per product")
     st.write("Number of Tickets per Product:")
     st.write(tickets_per_product)
 with tab4:
     st.header("Client Regional Inquires")
     st.plotly_chart(fig)
-    st.write("The piechart aboves shows which region the client is located in.")
+   
 
 
 

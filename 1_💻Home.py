@@ -61,7 +61,7 @@ tickets_per_day_highlighted = tickets_per_day_highlighted.style.applymap(
 
 
 df['Month'] = df['Create Date'].dt.month
-# Group by 'Month' and count the number of tickets for each month
+# count the number of tickets 
 tickets_by_month = df.groupby('Month').size().reset_index(name='Ticket Volume')
 tickets_by_week = df.groupby('Week').size().reset_index(name='Ticket Volume')
 tickets_by_day = df.groupby('Day').size().reset_index(name='Ticket Volume')
@@ -89,10 +89,12 @@ with tab1:
  
 with tab2:
    st.header("Weekly ticket distribution")
+   st.write("Weekly ticket creation")
    st.plotly_chart(fig_week)
    
 with tab3:
    st.header("Dailey ticket distribution")
+   st.write("Dailey ticket creation")
    st.plotly_chart(fig_day)
   
 with tab4:
@@ -105,10 +107,13 @@ with tab4:
         st.write("Weekly Ticket Count")
         st.write(tickets_per_week)
     with col3:
-        st.write("Daily Ticket Count")
-        st.write(tickets_per_day_highlighted)
-        st.write("Index: Blue-Holiday, Yellow-Weekend, Green-Both")
-
+     st.write("Daily Ticket Count")
+     st.write(tickets_per_day_highlighted)
+     index_string = "Index:, Blue-Holiday, Yellow-Weekend, Green-Both"
+     delimiter = ", "
+     parts = index_string.split(delimiter)
+     for part in parts:
+        st.write(part)
 
 
 
