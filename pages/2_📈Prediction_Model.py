@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import os
-import numpy as np
-import matplotlib.pyplot as plt
 
 css_file = os.path.abspath("style.css")
 
@@ -20,7 +18,7 @@ st.markdown('<div class="banner">BeepBoop</div>', unsafe_allow_html=True)
 
 df = pd.read_csv('/Users/wsliwka/Desktop/Python csv/pandas epa/tickets1.csv')
 #tab layout
-tab1, tab2, tab3, tab4 = st.tabs(["Product", "Employees", "Inquiries", "Client Region"])
+tab1, tab2, tab3, tab4 = st.tabs(["Product", "Employees", "Inquiries", "Team"])
 
 
 # Convert 'Create Date' column to datetime format
@@ -57,7 +55,7 @@ with tab3:
     st.write("Number of Tickets per Product:")
     st.write(tickets_per_product)
 with tab4:
-    st.header("Client Regional Inquires")
+    st.header("Team Distriubted Inquiries")
     st.plotly_chart(fig)
    
 

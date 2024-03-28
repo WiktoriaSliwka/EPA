@@ -1,16 +1,15 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from streamlit_option_menu import option_menu
 import os
 import holidays
-import plotly.graph_objects as go
+
+df = pd.read_csv('/Users/wsliwka/Desktop/Python csv/pandas epa/tickets1.csv')
 
 st.set_page_config(page_title="Ticket Dahsboard",
                    page_icon=":bar_chart:",
                    layout="wide")
 
-df = pd.read_csv('/Users/wsliwka/Desktop/Python csv/pandas epa/tickets1.csv')
 
 #css for banner
 css_file = os.path.abspath("style.css")
@@ -18,6 +17,7 @@ def local_css():
     with open("style.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 local_css()
+
 
 #landing page
 st.markdown('<div class="banner">BeepBoop</div>', unsafe_allow_html=True)
@@ -93,8 +93,8 @@ with tab2:
    st.plotly_chart(fig_week)
    
 with tab3:
-   st.header("Dailey ticket distribution")
-   st.write("Dailey ticket creation")
+   st.header("Daily ticket distribution")
+   st.write("Daily ticket creation")
    st.plotly_chart(fig_day)
   
 with tab4:
