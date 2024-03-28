@@ -17,7 +17,7 @@ local_css()
 st.markdown('<div class="banner">BeepBoop</div>', unsafe_allow_html=True)
 
 #df = pd.read_csv('/Users/wsliwka/Desktop/Python csv/pandas epa/tickets1.csv')
-df = pd.read_csv('/Users/wsliwka/Desktop/EPA code/EPA/csv/tickets1.csv')
+df = pd.read_csv('/Users/wsliwka/Desktop/EPA code/EPA/csv/tickets.csv')
 #tab layout
 tab1, tab2, tab3, tab4 = st.tabs(["Product", "Employees", "Inquiries", "Team"])
 

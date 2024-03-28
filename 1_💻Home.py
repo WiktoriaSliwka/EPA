@@ -5,7 +5,7 @@ import os
 import holidays
 
 #df = pd.read_csv('/Users/wsliwka/Desktop/Python csv/pandas epa/tickets1.csv')
-df = pd.read_csv('/Users/wsliwka/Desktop/EPA code/EPA/csv/tickets1.csv')
+df = pd.read_csv('/Users/wsliwka/Desktop/EPA code/EPA/csv/tickets.csv')
 st.set_page_config(page_title="Ticket Dahsboard",
                    page_icon=":bar_chart:",
                    layout="wide")

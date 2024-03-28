@@ -17,7 +17,7 @@ def local_css():
 local_css()
 st.markdown('<div class="banner">BeepBoop</div>', unsafe_allow_html=True)
 # df = pd.read_csv('/Users/wsliwka/Desktop/Python csv/pandas epa/tickets1.csv')
-df = pd.read_csv('/Users/wsliwka/Desktop/EPA code/EPA/csv/tickets1.csv')
+df = pd.read_csv('/Users/wsliwka/Desktop/EPA code/EPA/csv/tickets.csv')
 
 df['Resolve Date'] = pd.to_datetime(df['Resolve Date'], errors='coerce')
 #df['Resolve Date'] = pd.to_datetime(df['Resolve Date'])
